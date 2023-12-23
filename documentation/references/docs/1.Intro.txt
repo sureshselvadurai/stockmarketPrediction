@@ -1,0 +1,5 @@
+Chapter 1: Introduction to Stock Market Prediction and AI
+Overview of stock market prediction
+Importance of predictive analytics in trading
+Introduction to Artificial Intelligence and Machine Learning
+Role of Python in AI and data science

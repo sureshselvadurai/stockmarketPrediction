@@ -1,0 +1,10 @@
+# 3.4.2 Calculating Returns:
+
+In the provided Python code block, the section titled "Calculating Returns" focuses on computing both daily returns and cumulative returns for a given stock. Let's break down the relevant code:
+
+```python
+# Calculate daily returns
+stock_data['Daily_Return'] = stock_data['Adj Close'].pct_change()
+
+# Calculate cumulative returns
+stock_data['Cumulative_Return'] = (1 + stock_data['Daily_Return']).cumprod()

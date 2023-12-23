@@ -1,0 +1,18 @@
+
+Certainly! The concept of Time Value of Money (TVM) is fundamental in finance and refers to the idea that a sum of money has a different value today than it will in the future. The TVM concept recognizes the inherent opportunity cost of using money at one point in time over another. The key factors involved in TVM calculations include present value, future value, interest rate, and the time period.
+
+present_value = np.pv(rate=0.03, nper=5, pmt=0, fv=1000)
+
+np.pv: This NumPy function calculates the present value of an investment based on the given interest rate (rate), the number of periods (nper), payment per period (pmt), and future value (fv).
+rate=0.03: The annual interest rate (3% in this case).
+nper=5: The number of compounding periods (years in this case).
+pmt=0: Any additional payments made each period (assumed to be 0 in this example).
+fv=1000: The future value to be received after the specified number of periods (here, $1000).
+
+Explanation:
+
+The present value represents the current worth of a future sum of money, discounted at a certain rate. In this example, the present value is calculated as the value of receiving $1000 five years from now, discounted at a 3% annual interest rate.
+
+The future value represents the value of an investment at a future date, taking into account a certain interest rate. In this case, it calculates the value of an initial investment of $1000 compounded at a 3% annual interest rate for five years.
+
+Both present value and future value calculations are essential in financial decision-making, helping individuals and businesses evaluate the worth of investments and make informed choices based on the time value of money.
