@@ -1,16 +1,24 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+from utilities.data_loader import load_stocks, load_data_from_yahoo
+from EDA.EDATest import EDATest
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def main():
+    stocks = load_stocks()
+    for index, stock in stocks.iterrows():
+        stock_name = stock['name']
+        stock_value = stock['value']
+        print(f"Processing stock: ({stock_name}), Value: {stock_value}")
+        # data = load_data_from_yahoo(stock_value)
+        # data.to_csv(f"data/raw/{stock_name.lower()}.csv", index=False)
+
+        # Perform EDA
+        eda = EDATest(stock_name)
+        eda.display_info()
+        eda.display_head()
+
+        if eda.isValid():
+            pass
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
