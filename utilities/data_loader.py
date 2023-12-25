@@ -9,10 +9,11 @@ def load_data_from_yahoo(stock_symbol):
     yf.pdr_override()  # Enable Yahoo Finance API
 
     # Set the end date to today
-    end_date = datetime.today().strftime('%Y-%m-%d')
+    end_date = (datetime.today() - timedelta(days=300)).strftime('%Y-%m-%d')
+    # end_date = datetime.today().strftime('%Y-%m-%d')
 
     # Set the start date to one year ago
-    start_date_hourly = (datetime.today() - timedelta(days=365)).strftime('%Y-%m-%d')
+    start_date_hourly = (datetime.today() - timedelta(days=729)).strftime('%Y-%m-%d')
 
     # Fetch hourly interval data
     hourly_data = pdr.get_data_yahoo(stock_symbol, start=start_date_hourly, end=end_date, interval='60m')

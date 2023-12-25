@@ -27,7 +27,7 @@ class StockFeatureEngineer:
         self.df['Timestamp'] = pd.to_datetime(self.df['Timestamp'])
 
         # Extract day of the week
-        self.df['DayOfWeek'] = self.df['Timestamp'].dt.day_name()
+        self.df['DayOfWeek'] = self.df['Timestamp'].dt.dayofweek
 
         # Check if it's a holiday (assuming you have a list of holidays)
         holidays = ['2022-12-25', '2022-12-31']  # Add your holiday dates
