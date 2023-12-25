@@ -53,6 +53,9 @@ model.compile(loss='mean_squared_error', optimizer='adam')
 # Train the model
 model.fit(trainX, trainY, epochs=120, batch_size=1, verbose=2)
 
+# Save the trained model
+model.save(f"models/apple_lstm_model.h5")
+
 # Make predictions
 trainPredict = model.predict(trainX)
 testPredict = model.predict(testX)
