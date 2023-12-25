@@ -21,9 +21,9 @@ stock_data = yf.download(ticker, start=start_date, end=end_date)
 # Display the first few rows of the data
 print(stock_data.head())
 
-# Exploratory Data Analysis (EDA)
+# Exploratory Data Analysis (data_processing)
 # Summary statistics
-print("\nSummary Statistics:")
+print("\nSummary statistics:")
 print(stock_data.describe())
 
 # Plotting the closing prices
